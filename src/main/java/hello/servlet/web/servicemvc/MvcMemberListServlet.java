@@ -18,7 +18,8 @@ public class MvcMemberListServlet extends HttpServlet {
     private final MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
         final List<Member> members = memberRepository.findAll();
 
